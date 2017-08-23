@@ -4,13 +4,13 @@
 
 namespace WinApiMVC
 {
-	class CriticalSection;
+	class iCriticalSection;
 	
 	class ObserveableImpl :
 		public iObserveable
 	{
 	public:
-		ObserveableImpl();
+		ObserveableImpl(iCriticalSection* Cs);
 		virtual ~ObserveableImpl();
 	
 		virtual void RegisterListener(iView* Listener) override;
@@ -19,7 +19,7 @@ namespace WinApiMVC
 		
 	private:
 		std::set<iView*> Listeners;
-		CriticalSection* Cs;
+		iCriticalSection* Cs;
 	};
 }
 

@@ -1,19 +1,12 @@
 #include "ObserveableImpl.h"
-#include "CriticalSection.h"
+#include "iCriticalSection.h"
 #include "iView.h"
 
 using namespace WinApiMVC;
 
-ObserveableImpl::ObserveableImpl()
+ObserveableImpl::ObserveableImpl(iCriticalSection* Cs)
 {
-	try
-	{
-		Cs = new CriticalSection;
-	}
-	catch(const exception& e)
-	{
-		Cs = nullptr;
-	}
+	this->Cs = Cs;
 }
 
 ObserveableImpl::~ObserveableImpl()
@@ -24,7 +17,6 @@ ObserveableImpl::~ObserveableImpl()
 	if(Cs)
 	{
 		Cs->LeaveCS();
-		delete Cs;
 	}
 }
 

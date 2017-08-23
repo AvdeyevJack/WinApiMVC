@@ -1,17 +1,19 @@
 #pragma once
+#include "iCriticalSection.h"
 
 class CRITICAL_SECTION;
 
 namespace WinApiMVC
 {
-	class CriticalSection
+	class CriticalSection :
+		public iCriticalSection
 	{
 	public:
 		CriticalSection();
 		~CriticalSection();
 		
-		void EnterCS();
-		void LeaveCS();
+		virtual void EnterCS() override;
+		virtual void LeaveCS() override;
 		
 		class InvalidCriticalSection :
 			public exception
