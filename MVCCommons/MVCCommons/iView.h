@@ -1,16 +1,15 @@
 #pragma once
 
-class std::wstring;
-
 namespace WinApiMVC
 {
+	class iObserveable;
+	
 	class iView
 	{
 	public:
 		virtual ~iView() = 0;
 
-		virtual void SetText(const std::wstring& Text) = 0;
-		virtual void HandleEvent() = 0;
+		virtual void HandleEvent(iObserveable* EventSrc) = 0;
 	};
 }
 
