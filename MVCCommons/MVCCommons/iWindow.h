@@ -1,12 +1,10 @@
 #pragma once
+#include "WinTypeDefinitions.h"
 
 class std::wstring;
-class WND;
 
 namespace WinApiMVC
 {
-	typedef WND* HWND;
-	
 	class iWindow
 	{
 	public:

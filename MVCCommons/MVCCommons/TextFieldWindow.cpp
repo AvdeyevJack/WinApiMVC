@@ -4,13 +4,17 @@
 
 using namespace WinApiMVC;
 
-TextFieldWindow::TextFieldWindow(iDataModel* DataModel, iWindow* ParentWnd)
+TextFieldWindow::TextFieldWindow(iDataModel* DataModel, iWindow* ParentWnd, iTextGuiModel* GuiModel)
 {
+	if ((!DataModel) || (!ParentWnd) || (!GuiModel))
+		throw NullPointerException;
 	this->DataModel = DataModel;
 	this->ParentWnd = ParentWnd;
+	this->GuiModel = GuiModel;
+	
 	try
 	{
-		
+		hWnd = GuiModel->Create();
 	}
 	catch (const std::exception& e)
 	{}
@@ -40,7 +44,9 @@ TextFieldWindow::void HandleEvent(iObserveable* EventSrc)
 }
 
 TextFieldWindow::void SetText(const std::wstring& Text)
-{}
+{
+	
+}
 
 TextFieldWindow::Move(int X, int Y)
 {}

@@ -12,10 +12,6 @@ namespace WinApiMVC
 		virtual void RegisterListener(iView* Listener) = 0;
 		virtual void UnregisterListener(iView* Listener) = 0;
 		virtual void Notify() = 0;
-		
-		class NullPointerException :
-			public std::exception
-		{};
 	};
 }
 

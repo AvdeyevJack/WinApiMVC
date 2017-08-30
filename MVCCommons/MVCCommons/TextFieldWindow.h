@@ -38,6 +38,7 @@ namespace WinApiMVC
 		HWND			hWnd;
 		
 		static std::map<HWND, TextFieldWindow*> WindowHandlers;
+		static LRESULT CALLBACK WndProcedure (HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam);
 	};
 }
 
