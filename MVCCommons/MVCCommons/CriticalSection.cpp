@@ -26,16 +26,14 @@ CriticalSection::~CriticalSection()
 
 void CriticalSection::EnterCS()
 {
-	if(!Cs)
-		throw InvalidCriticalSection;
-	EnterCriticalSection(Cs);
+	if(Cs)
+		EnterCriticalSection(Cs);
 }
 
 void CriticalSection::LeaveCS()
 {
-	if(!Cs)
-		throw InvalidCriticalSection;
-	LeaveCriticalSection(Cs);
+	if(Cs)
+		LeaveCriticalSection(Cs);
 }
 
 

@@ -33,13 +33,16 @@ void ObserveableImpl::RegisterListener(iView* Listener)
 
 void ObserveableImpl::UnregisterListener(iView* Listener)
 {
-	if (nullptr == Listener)
-		throw NullPointerException();
-	if(Cs)
-		Cs->EnterCS();
-	Listeners.erase(Listener);
-	if(Cs)
-		Cs->LeaveCS();
+	try
+	{
+		if(Cs)
+			Cs->EnterCS();
+		Listeners.erase(Listener);
+		if(Cs)
+			Cs->LeaveCS();
+	}
+	catch (const std::exception& e)
+	{}
 }
 
 void ObserveableImpl::Notify()

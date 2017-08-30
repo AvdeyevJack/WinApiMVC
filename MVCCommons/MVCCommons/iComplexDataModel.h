@@ -10,8 +10,8 @@ namespace WinApiMVC
 	public:
 		virtual ~iComplexDataModel() = 0;
 		
-		virtual *iDataModel GetData(int Index) = 0;
-		virtual int GetNestedModelsCount() = 0;
+		virtual *iDataModel GetDataModel(int Index) = 0;
+		virtual int GetModelsCount() = 0;
 	};
 }
 

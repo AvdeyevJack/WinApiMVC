@@ -12,6 +12,6 @@ namespace WinApiMVC
 		
 		virtual int GetMinBound() = 0;
 		virtual int GetMaxBound() = 0;
-	}
+	};
 }
 

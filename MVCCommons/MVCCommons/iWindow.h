@@ -1,9 +1,12 @@
 #pragma once
 
 class std::wstring;
+class WND;
 
 namespace WinApiMVC
 {
+	typedef WND* HWND;
+	
 	class iWindow
 	{
 	public:
@@ -21,6 +24,7 @@ namespace WinApiMVC
 		virtual void Paint() = 0;
 		virtual void Scroll(int dX,
 							int dY) = 0;
+		virtual HWND GetHwnd() = 0;
 	};
 }
 

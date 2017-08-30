@@ -9,6 +9,7 @@ namespace WinApiMVC
 	public:
 		virtual ~iView() = 0;
 
+		virtual void Bind() = 0;
 		virtual void HandleEvent(iObserveable* EventSrc) = 0;
 	};
 }

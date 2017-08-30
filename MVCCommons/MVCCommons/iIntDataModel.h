@@ -11,6 +11,6 @@ namespace WinApiMVC
 		virtual ~iIntDataModel() = 0;
 		
 		virtual int GetInt() = 0;
-	}
+	};
 }
 

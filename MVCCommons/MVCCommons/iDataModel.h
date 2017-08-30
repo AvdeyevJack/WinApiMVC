@@ -10,7 +10,7 @@ namespace WinApiMVC
 	public:
 		virtual ~iDataModel() = 0;
 		
-		virtual std::string ToString() = 0;
-	}
+		virtual std::wstring ToString() = 0;
+	};
 }
 

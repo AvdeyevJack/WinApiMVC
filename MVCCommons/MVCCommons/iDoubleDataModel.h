@@ -11,6 +11,6 @@ namespace WinApiMVC
 		virtual ~iDoubleDataModel() = 0;
 		
 		virtual double GetDouble() = 0;
-	}
+	};
 }
 
