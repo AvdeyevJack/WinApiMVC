@@ -134,11 +134,6 @@
     <ClInclude Include="iView.h" />
     <ClInclude Include="iWindow.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="iController.cpp" />
-    <ClCompile Include="iView.cpp" />
-    <ClCompile Include="iWindow.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
